@@ -13,3 +13,7 @@ jobs:
       uses: NuGet/setup-nuget@v1
     - name: Restore packages
       run: nuget restore DatToXLS.sln
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: MSBuild
+      run: msbuild DatToXLS.sln
