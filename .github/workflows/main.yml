@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Setup Nuget.exe
-      uses: NuGet/setup-nuget
+      uses: NuGet/setup-nuget@v1
     - name: Restore packages
       run: nuget restore DatToXLS.sln
