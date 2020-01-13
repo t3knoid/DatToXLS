@@ -97,13 +97,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btCancel;
             this.ClientSize = new System.Drawing.Size(508, 143);
-            this.ControlBox = false;
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btConvert);
             this.Controls.Add(this.btBrowse);
             this.Controls.Add(this.tbConcordanceFilePath);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "DAT to XLSX Converter";
             this.ResumeLayout(false);
