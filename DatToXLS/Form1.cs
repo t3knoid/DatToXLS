@@ -77,7 +77,7 @@ namespace DatToXLS
             }
             else
             {
-                btConvert.Enabled = true; // otherwise, disable convert button
+                btConvert.Enabled = false; // otherwise, disable convert button
             }
         }
 
