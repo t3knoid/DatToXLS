@@ -80,5 +80,35 @@ namespace DatToXLS
                 btConvert.Enabled = true; // otherwise, disable convert button
             }
         }
+
+        private void tbConcordanceFilePath_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (files != null && files.Length != 0)
+            {
+                tbConcordanceFilePath.Text = files[0];
+            }
+
+        }
+
+        private void tbConcordanceFilePath_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+            {
+                e.Effect = DragDropEffects.All;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void tbConcordanceFilePath_DragOver(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
     }
 }

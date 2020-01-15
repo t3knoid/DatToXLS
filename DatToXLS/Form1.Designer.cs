@@ -38,12 +38,15 @@
             // 
             // tbConcordanceFilePath
             // 
-            this.tbConcordanceFilePath.Enabled = false;
+            this.tbConcordanceFilePath.AllowDrop = true;
             this.tbConcordanceFilePath.Location = new System.Drawing.Point(13, 51);
             this.tbConcordanceFilePath.Name = "tbConcordanceFilePath";
             this.tbConcordanceFilePath.Size = new System.Drawing.Size(402, 20);
             this.tbConcordanceFilePath.TabIndex = 0;
             this.tbConcordanceFilePath.TextChanged += new System.EventHandler(this.tbConcordanceFilePath_TextChanged);
+            this.tbConcordanceFilePath.DragDrop += new System.Windows.Forms.DragEventHandler(this.tbConcordanceFilePath_DragDrop);
+            this.tbConcordanceFilePath.DragEnter += new System.Windows.Forms.DragEventHandler(this.tbConcordanceFilePath_DragEnter);
+            this.tbConcordanceFilePath.DragOver += new System.Windows.Forms.DragEventHandler(this.tbConcordanceFilePath_DragOver);
             // 
             // btBrowse
             // 
