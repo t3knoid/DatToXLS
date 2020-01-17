@@ -1,13 +1,13 @@
-version: 1.0.1.{build}
+version: 1.0.{build}
 configuration: Release
 platform: Any CPU
+environment:
+  EnableNuGetPackageRestore: ON
 build:
   project: DatToXLS.sln
-  verbosity: normal
+  verbosity: minimal
 after_build:
-- cmd: '"packages\NSIS.2.51\tools\makensis.exe" "installer\DatToXLS.nsi"'
-artifacts:
-- path: Installer\DatToXLS_setup.exe
+- cmd: '"packages\NSIS.2.51\tools\makensis.exe" "installer\KeepAwake.nsi"'
 deploy:
 - provider: GitHub
   auth_token:
