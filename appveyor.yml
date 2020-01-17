@@ -1,0 +1,15 @@
+version: 1.0.1.{build}
+configuration: Release
+platform: Any CPU
+build:
+  project: DatToXLS.sln
+  verbosity: normal
+after_build:
+- cmd: '"packages\NSIS.2.51\tools\makensis.exe" "installer\DatToXLS.nsi"'
+artifacts:
+- path: Installer\DatToXLS_setup.exe
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: gX7uENpEovQdzscLdFEkic6eRFdekgL5T9Uuo/XIGwq7PSTFqnrka1xi+FTDDnYv
+  prerelease: true
