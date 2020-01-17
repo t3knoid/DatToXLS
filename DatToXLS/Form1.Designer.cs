@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbConcordanceFilePath = new System.Windows.Forms.TextBox();
             this.btBrowse = new System.Windows.Forms.Button();
             this.btConvert = new System.Windows.Forms.Button();
@@ -106,6 +107,7 @@
             this.Controls.Add(this.btBrowse);
             this.Controls.Add(this.tbConcordanceFilePath);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "DAT to XLSX Converter";
