@@ -6,5 +6,4 @@ cd "%makeDir%"
 if not exist ..\packages\NSIS.2.51\tools\NSIS.exe @echo NSIS not found, exiting.&&exit /b 1
 @echo NSIS exists. Making installer.
 copy /y plugins\*.* ..\packages\NSIS.2.51\tools\plugins\.
-copy /y include\*.* ..\packages\NSIS.2.51\tools\include\.
 ..\packages\NSIS.2.51\tools\makensis.exe DatToXLS.nsi

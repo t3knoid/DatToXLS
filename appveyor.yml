@@ -8,7 +8,13 @@ build:
   project: DatToXLS.sln
   verbosity: minimal
 after_build:
-- cmd: '"packages\NSIS.2.51\tools\makensis.exe" "installer\DatToXLS.nsi"'
+- cmd: >-
+    copy /y Installer\plugins\*.* packages\NSIS.2.51\tools\plugins\.
+
+    packages\NSIS.2.51\tools\makensis.exe installer\DatToXLS.nsi
+artifacts:
+- path: installer\DatToXLS_setup.exe
+  name: DatToXLS Windows Installer
 deploy:
 - provider: GitHub
   auth_token:
